@@ -9,17 +9,33 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var textField1: UITextField!
+    @IBOutlet var textField2: UITextField!
+    @IBOutlet var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func keisan(){
+        var x1 = textField1.text
+        var x2 = textField2.text
+        
+        var num1 : Int = x1.toInt()!
+        var num2 : Int = x2.toInt()!
+        
+        var y = num1 + num2
 
-
+        label.text = String(y)
+            
+    }
+    
 }
 
