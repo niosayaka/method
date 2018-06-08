@@ -28,8 +28,8 @@ class ViewController: UIViewController {
         var x1 = textField1.text
         var x2 = textField2.text
         
-        var num1 : Int = x1.toInt()!
-        var num2 : Int = x2.toInt()!
+        var num1 : Int = Int(x1!)!
+        var num2 : Int = Int(x2!)!
         
         var y = num1 + num2
 
