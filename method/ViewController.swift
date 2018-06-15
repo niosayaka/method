@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var textField1: UITextField!
-    @IBOutlet var textField2: UITextField!
+    @IBOutlet var numberA: UITextField!
+    @IBOutlet var numberB: UITextField!
     @IBOutlet var label: UILabel!
     
     override func viewDidLoad() {
@@ -24,18 +24,23 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func keisan(){
-        var x1 = textField1.text
-        var x2 = textField2.text
+    func plus(numberA: String, numberB: String) -> Int{
+        var result: Int = 0
         
-        var num1 : Int = Int(x1!)!
-        var num2 : Int = Int(x2!)!
-        
-        var y = num1 + num2
-
-        label.text = String(y)
+        if numberA == ""{
             
+        }else if numberB == ""{
+            
+        }else if numberA == "" && numberB == ""{
+            
+        }else{
+            result = Int(numberA)! + Int(numberB)!
+        }
+        return result
     }
     
-}
+    @IBAction func plus(){
+        label.text = String(plus(numberA: numberB.text!, numberB: numberB.text!))
+    }
 
+}
